@@ -318,7 +318,7 @@ public function postprofilepic(Request $request)
 
             $user = Auth::user();
             $user->image = $filename;
-            $user->save();
+            $user->save(); 
         }
 
         return redirect()->route('dashboard',['username'=>Auth::user()->username]);
